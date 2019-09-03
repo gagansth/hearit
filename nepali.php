@@ -16,8 +16,9 @@
         }
         
     </style>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body bgcolor="#206040" link="white" alink="green" vlink="red">
+  <body bgcolor="#206040" link="white" alink="green" vlink="white">
     <table width="100%" border="1">
       <tr height="200" >
         <td colspan="2" align="center"><h1> <font family="comic sans" color="yellow"><a name="top"> Welcome to HearIt!!!</a></font></h1></td>
@@ -107,34 +108,41 @@
                 </td>
                   </tr>
                 </table>
-                <table width="100%" style="margin-top:15px;">
-                  <tr >
-                    <td colspan="2" align="center">
-                <?php
-                $serverName='localhost';
-                $dbname='id7775254_hearit';
-                $dbPassword='HEARITROOT';
-                $username='id7775254_root';
+                <div class="container">
+          <div class="grid-container">
+            <?php
+            $serverName = 'localhost';
+            $dbname = 'hearit';
+            $dbPassword = '';
+            $username = 'root';
 
-                $conn = mysqli_connect($serverName,$username,$dbPassword,$dbname);
-                // $artist=$_GET['artist'];
-                // $songname=$_GET['songname'];
-                // $url = $_GET['url'];
-                $last_id=mysqli_insert_id($conn);
-                $sql="select id,artist,songname,url from songs ";
-                $result = mysqli_query($conn, $sql);
-                $row = mysqli_fetch_assoc($result);
-                foreach($result as $row){
-                                  ?>
-                  <a href="<?php echo $row['url'];?>" target="_blank"><?php echo $row['artist'];?> - <?php echo $row['songname'];?></a><br><br>
-            <!--      echo "<a href=" .$row["url"] "target=_blank>".$artist. " -" .$songname."</a><br><br>";   -->
-          <?php  }
+            $conn = mysqli_connect($serverName, $username, $dbPassword, $dbname);
+            // $artist=$_GET['artist'];
+            // $songname=$_GET['songname'];
+            // $url = $_GET['url'];
+            $last_id = mysqli_insert_id($conn);
+            $sql = "select id,artist,songname,url from songs ";
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+            foreach ($result as $row) {
+              $embedurl = str_replace("/watch?v=", "/embed/", $row['url']);
+              ?>
+              <div class="card">
+                <div class="face face1">
+                  <div class="content">
+                    <iframe src="<?php echo $embedurl; ?>" height="200" width="300" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="face face2">
+                  <div class="content">
+                    <p><?php echo $row['artist']; ?> - <?php echo $row['songname']; ?></p>
+                  </div>
+                </div>
+              </div>
 
-
-                ?>
-              </td>
-            </tr>
-          </table>
+            <?php   }   ?>
+          </div>
+        </div>
         </td>
       </tr>
       <tr>

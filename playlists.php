@@ -69,10 +69,72 @@ color:#aefe8e;
       color:cyan;
     }
 
+    .container{
+    width:95%; 
+    /* width: 1000px;   */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.container .card {
+    position:relative;
+}
+ .container .card .face{
+    width:300px;
+    height:200px;
+    transition: 0.5s;
+}
+    .card .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+.card:hover .face.face1{
+    transform: translateY(0px);
+}
+.face1 .content{
+    opacity:0.5;
+    transition: 1s;
+    
+}
+.card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.card .face.face2{
+    position: relative;
+    /* height:50px; */
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    transform: translateY(-100px);
+}
+.card:hover .face.face2{
+    transform: translateY(0px);
+}
+.card .face.face2 .content p{
+    margin: 0;
+    padding: 0; 
+    color: #fff;  
+    font-family: consolas;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
     </style>
   </head>
 
-  <body bgcolor="#206040" link="white" alink="green" vlink="red">
+  <body bgcolor="#206040" link="white" alink="green">
 <div class="parallax">
     <table width="100%" border="1">
 
@@ -219,28 +281,41 @@ color:#aefe8e;
     </table>
       <div id='bottom-container'>
         <div id='old-hits'> Old Hits </div>
-        <?php
-        $serverName='localhost';
-        $dbname='id7775254_hearit';
-        $dbPassword='HEARITROOT';
-        $username='id7775254_root';
+        <div class="container">
+          <div class="grid-container">
+            <?php
+            $serverName = 'localhost';
+            $dbname = 'hearit';
+            $dbPassword = '';
+            $username = 'root';
 
-        $conn = mysqli_connect($serverName,$username,$dbPassword,$dbname);
-        // $artist=$_GET['artist'];
-        // $songname=$_GET['songname'];
-        // $url = $_GET['url'];
-        $last_id=mysqli_insert_id($conn);
-        $sql="select id,artist,songname,url from shuffledplaylist ";
-        $result = mysqli_query($conn, $sql);
-        $row = mysqli_fetch_assoc($result);
-        foreach($result as $row){
-                          ?>
-          <a href="<?php echo $row['url'];?>" target="_blank"><?php echo $row['artist'];?> - <?php echo $row['songname'];?></a><br><br>
-    <!--      echo "<a href=" .$row["url"] "target=_blank>".$artist. " -" .$songname."</a><br><br>";   -->
-  <?php  }
+            $conn = mysqli_connect($serverName, $username, $dbPassword, $dbname);
+            // $artist=$_GET['artist'];
+            // $songname=$_GET['songname'];
+            // $url = $_GET['url'];
+            $last_id = mysqli_insert_id($conn);
+            $sql = "select id,artist,songname,url from shuffledplaylist ";
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+            foreach ($result as $row) {
+              $embedurl = str_replace("/watch?v=", "/embed/", $row['url']);
+              ?>
+              <div class="card">
+                <div class="face face1">
+                  <div class="content">
+                    <iframe src="<?php echo $embedurl; ?>" height="200" width="300" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="face face2">
+                  <div class="content">
+                    <p><?php echo $row['artist']; ?> - <?php echo $row['songname']; ?></p>
+                  </div>
+                </div>
+              </div>
 
-
-        ?>
+            <?php   }   ?>
+          </div>
+        </div>
       </div>
       <table border="1" width="100%">
       <tr>
