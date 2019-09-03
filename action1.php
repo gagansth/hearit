@@ -9,7 +9,7 @@ $conn = mysqli_connect($serverName,$username,$dbPassword,$dbname);
 $artist=$_GET['artist'];
 $songname=$_GET['songname'];
 $url = $_GET['url'];
-
+if(($artist !=null && $artist !="") || ($songname !=null && $songname !="") || ($url !=null && $url !="")){
 $repeat="select artist,songname,url from hindisongs where url='$url'";
 $result=mysqli_query($conn,$repeat);
 if (mysqli_num_rows($result) >0){
@@ -24,6 +24,10 @@ echo $artist . "<br>";
 echo $songname."<br>";
  echo $url. "<br>";
  echo "Added Successfully! Check at the bottom of the list for the song added. <br><a href='hindi.php'>Go back to the main page</a> ";
+}
+}
+else{
+  echo "You must enter details to add new link!!";
 }
 
 

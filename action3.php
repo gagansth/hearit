@@ -10,6 +10,7 @@ $artist=$_GET['artist'];
 $songname=$_GET['songname'];
 $url = $_GET['url'];
 
+if(($artist !=null && $artist !="") || ($songname !=null && $songname !="") || ($url !=null && $url !="")){
 $repeat="select artist,songname,url from shuffledplaylist where url='$url'";
 $result=mysqli_query($conn,$repeat);
 if (mysqli_num_rows($result) >0){
@@ -25,7 +26,10 @@ echo $songname."<br>";
  echo $url. "<br>";
  echo "Added Successfully! Check at the bottom of the list for the song added. <br> <a href='playlists.php'>Go back to the main page</a> ";
 }
-
+}
+else{
+  echo "You must enter details to add new link!!";
+}
 
 mysqli_close($conn);
  ?>
