@@ -1,0 +1,19 @@
+#channeldiv{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+    .channelicon1{
+        /* padding: 20px 50px 15px 50px; */
+        text-align: center;
+        
+    }
+
+.channelicon{
+    align-content: center;
+    position:relative;
+border-radius: 50%;
+height:30%;
+max-width:100%;
+}
+
