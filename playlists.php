@@ -56,7 +56,7 @@ color:#aefe8e;
       height:auto;
       text-align:center;
       position:relative;
-      align:bottom;
+      text-align:bottom;
       background-image:url("Pictures/st.jpg");
       background-size:cover;
       background-attachment:fixed;
@@ -75,6 +75,7 @@ color:#aefe8e;
     position: relative;
     display: flex;
     justify-content: space-between;
+    margin-left: 15px;
 }
 .container .card {
     position:relative;
@@ -144,11 +145,14 @@ color:#aefe8e;
       <tr>
         <td align="center" colspan="2" height="100">
           <font size="5">
-            <a href="index.html" color="white">Home</a> &nbsp;|
+            <a href="index.php" color="white">Home</a> &nbsp;|
             <a href="english.php">English</a> &nbsp;|
             <a href="hindi.php">Hindi</a> &nbsp;|
             <a href="nepali.php">Nepali</a> &nbsp;|
             <a href="playlists.php">Shuffled Playlist</a> &nbsp;|
+            <a href="kpop.html">K-POP</a> &nbsp; |
+            <a href="rock.php"><img src="Pictures/rockicon.png" alt="Rock" style="height:30px;position:absolute;"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+            <a href="edm.php"><img src="Pictures/edm.png" alt="EDM" style="height:40px;position:absolute;margin-top:-4px;"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
             <a href="aboutus.html">About Us</a>
           </font>
         </td>
@@ -157,11 +161,11 @@ color:#aefe8e;
         <td colspan="2">
           <form name='addForm' method='get' action="action3.php"/>
             <label>Enter Artist Name</label>
-            <input type='text' name='artist' id='artist'></br>
+            <input type='text' name='artist' id='artist' required></br>
             <label>Enter Song Name</label>
-            <input type='text' name='songname' id='songname'><br>
+            <input type='text' name='songname' id='songname' required><br>
             <label>Enter Youtube URL</label>
-            <input type='text' name='url' id='url'></input><br>
+            <input type='text' name='url' id='url' required></input><br>
             <button type='submit' >Add</button> &nbsp; &nbsp; &nbsp;
             <a href="#bottom">Check below</a>
           </form>
@@ -170,41 +174,28 @@ color:#aefe8e;
 
       <tr>
         <td>
-          <a href="https://www.youtube.com/watch?v=RvnkAtWcKYg" target="_blank">Paramore-Decode</a><br><br>
           <a href="https://www.youtube.com/watch?v=rtOvBOTyX00" target="_blank">Christina Perri-A thousand years</a><br><br>
           <a href="https://www.youtube.com/watch?v=dG6-bU6esKo" target="_blank">Lifehouse ft Natasha Bedingfield-Between the raindrops</a><br><br>
-          <a href="https://www.youtube.com/watch?v=3YxaaGgTQYM" target="_blank">Evanescence-Bring me to life</a><br><br>
-          <a href="https://www.youtube.com/watch?v=vx2u5uUu3DE" target="_blank">Bon Jovi-It's my life</a><br><br>
-          <a href="https://www.youtube.com/watch?v=8SbUC-UaAxE" target="_blank">Guns N' Roses-November rain</a><br><br>
-          <a href="https://www.youtube.com/watch?v=1w7OgIMMRc4" target="_blank">Guns N' Roses-Sweet child o' mine</a><br><br>
-          <a href="https://www.youtube.com/watch?v=gEPmA3USJdI" target="_blank">AC/DC-Highway to hell</a><br><br>
-          <a href="https://www.youtube.com/watch?v=lL2ZwXj1tXM" target="_blank">Three Days Grace-Never too late</a><br><br>
-          <a href="https://www.youtube.com/watch?v=d8ekz_CSBVg" target="_blank">Three Days Grace-I hate everything about you</a><br><br>
-          <a href="https://www.youtube.com/watch?v=xqds0B_meys" target="_blank">Three Days Grace-Animal i have become</a><br><br>
-          <a href="https://www.youtube.com/watch?v=N8Sqjtdtzw0" target="_blank">My Darkest Days-Without you</a><br><br>
-          <a href="https://www.youtube.com/watch?v=7QU1nvuxaMA" target="_blank">Audioslave-Like a stone</a><br><br>
-          <a href="https://www.youtube.com/watch?v=WC5FdFlUcl0" target="_blank">Audioslave-Be yourself</a><br><br>
-          <a href="https://www.youtube.com/watch?v=hTWKbfoikeg" target="_blank">Nirvana-Smells like teen spirit</a><br><br>
-          <a href="https://www.youtube.com/watch?v=Tj75Arhq5ho" target="_blank">Metallica-Nothing else matters</a><br><br>
-          <a href="https://www.youtube.com/watch?v=n4RjJKxsamQ" target="_blank">Scorpions-Wind of change</a><br><br>
-          <a href="https://www.youtube.com/watch?v=btPJPFnesV4" target="_blank">Survivor-Eye of the tiger</a><br><br>
-          <a href="https://www.youtube.com/watch?v=Soa3gO7tL-c" target="_blank">Green Day-Boulevard of broken dreams</a><br><br>
-          <a href="https://www.youtube.com/watch?v=kPBzTxZQG5Q" target="_blank">3 Doors Down-Here without you</a><br><br>
-          <a href="https://www.youtube.com/watch?v=fV4DiAyExN0" target="_blank">Hoobastank-The reason</a><br><br>
-          <a href="https://www.youtube.com/watch?v=_ao2u7F_Qzg" target="_blank">The Rasmus-In the shadows</a><br><br>
-          <a href="https://www.youtube.com/watch?v=zlLkscjDWsA" target="_blank">Tokio Hotel-World behind my wall</a><br><br>
-          <a href="https://www.youtube.com/watch?v=P0KyIeHcCzs" target="_blank">Hoobastank-Disappear</a><br><br>
-          <a href="https://www.youtube.com/watch?v=s1tAYmMjLdY" target="_blank">blink-182-I miss you</a><br><br>
-          <a href="https://www.youtube.com/watch?v=H86730HjLVA" target="_blank">blink-182-After midnight</a><br><br>
-          <a href="https://www.youtube.com/watch?v=OeYLdKs3Z7o" target="_blank">blink-182-Wishing well</a><br><br>
+          <a href="https://www.youtube.com/watch?v=mwZb1o9XOzU" target="_blank">Alvaro &amp; Joey Dale-Ready for action</a><br><br>
+          <a href="https://www.youtube.com/watch?v=JRfuAukYTKg" target="_blank">David Guetta ft Sia-Titanium</a><br><br>
+          <a href="https://www.youtube.com/watch?v=mk48xRzuNvA" target="_blank">The Script ft Will.i.am-Hall of fame</a><br><br>
+          <a href="https://www.youtube.com/watch?v=T3E9Wjbq44E" target="_blank">Gym Class Heroes ft Adam Levine-Stereo heart</a><br><br>
+          <a href="https://www.youtube.com/watch?v=C-dvTjK_07c" target="_blank">Usher ft Pitbull-Dj got us fallin' in love again</a><br><br>
+          <a href="https://www.youtube.com/watch?v=985efUAJ2I8" target="_blank">Lady Gaga-Just dance</a><br><br>
+          <a href="https://www.youtube.com/watch?v=D6DFLNa6MBA" target="_blank">Ellie Goulding-Love me like you do</a><br><br>
+          <a href="https://www.youtube.com/watch?v=CGyEd0aKWZE" target="_blank">Ellie Goulding-Burn</a><br><br>
+          <a href="https://www.youtube.com/watch?v=3O1_3zBUKM8" target="_blank">Naughty Boy ft Sam Smith-La la la</a><br><br>
+          <a href="https://www.youtube.com/watch?v=U41KPUfOSFk" target="_blank">Justin Timberlake-Mirrors</a><br><br>
+          <a href="https://www.youtube.com/watch?v=o8pAIO3CPBY" target="_blank">Bruno Mars-Count on me</a><br><br>
+          <a href="https://www.youtube.com/watch?v=bltr_Dsk5EY" target="_blank">Afrojack ft Wrabel-Ten feet tall</a><br><br>
+          <a href="https://www.youtube.com/watch?v=CFF0mV24WCY" target="_blank">Tiesto-Red Lights</a><br><br>
+
 <div class="picture">
           <a href="https://www.youtube.com/watch?v=JMl8cQjBfqk" target="_blank">Angels and Airwaves-The adventure</a><br><br>
           <a href="https://www.youtube.com/watch?v=nW-lo1iUs7U" target="_blank">Angels and Airwaves-True Love</a><br><br>
           <a href="https://www.youtube.com/watch?v=Tr8uesBowS4" target="_blank">Limp Bibzkit-Behind blue eyes</a><br><br>
-          <a href="https://www.youtube.com/watch?v=E813VYySueM" target="_blank">Lamb of God-Set to fail</a><br><br>
           <a href="https://www.youtube.com/watch?v=gS9o1FAszdk" target="_blank">The Script-The man who can't be moved</a><br><br>
           <a href="https://www.youtube.com/watch?v=8UVNT4wvIGY" target="_blank">Gotye ft Kimbra-Somebody that i used to know</a><br><br>
-          <a href="https://www.youtube.com/watch?v=_wA5NmQESx8" target="_blank">Disturbed-Down with the sickness</a><br><br>
           <a href="https://www.youtube.com/watch?v=Kw2FVxSOhv4" target="_blank">Eagles-Love will keep us alive</a><br><br>
           <a href="https://www.youtube.com/watch?v=ctXeHc9_kr8" target="_blank">Eagles-Hotel california</a><br><br>
           <a href="https://www.youtube.com/watch?v=DelhLppPSxY" target="_blank">Avenged Sevenfold-Hail to the king</a><br><br>
@@ -226,19 +217,7 @@ color:#aefe8e;
 
 
       <td>
-         <a href="https://www.youtube.com/watch?v=mwZb1o9XOzU" target="_blank">Alvaro &amp; Joey Dale-Ready for action</a><br><br>
-          <a href="https://www.youtube.com/watch?v=JRfuAukYTKg" target="_blank">David Guetta ft Sia-Titanium</a><br><br>
-          <a href="https://www.youtube.com/watch?v=mk48xRzuNvA" target="_blank">The Script ft Will.i.am-Hall of fame</a><br><br>
-          <a href="https://www.youtube.com/watch?v=T3E9Wjbq44E" target="_blank">Gym Class Heroes ft Adam Levine-Stereo heart</a><br><br>
-          <a href="https://www.youtube.com/watch?v=C-dvTjK_07c" target="_blank">Usher ft Pitbull-Dj got us fallin' in love again</a><br><br>
-          <a href="https://www.youtube.com/watch?v=985efUAJ2I8" target="_blank">Lady Gaga-Just dance</a><br><br>
-          <a href="https://www.youtube.com/watch?v=D6DFLNa6MBA" target="_blank">Ellie Goulding-Love me like you do</a><br><br>
-          <a href="https://www.youtube.com/watch?v=CGyEd0aKWZE" target="_blank">Ellie Goulding-Burn</a><br><br>
-          <a href="https://www.youtube.com/watch?v=3O1_3zBUKM8" target="_blank">Naughty Boy ft Sam Smith-La la la</a><br><br>
-          <a href="https://www.youtube.com/watch?v=U41KPUfOSFk" target="_blank">Justin Timberlake-Mirrors</a><br><br>
-          <a href="https://www.youtube.com/watch?v=o8pAIO3CPBY" target="_blank">Bruno Mars-Count on me</a><br><br>
-          <a href="https://www.youtube.com/watch?v=bltr_Dsk5EY" target="_blank">Afrojack ft Wrabel-Ten feet tall</a><br><br>
-          <a href="https://www.youtube.com/watch?v=CFF0mV24WCY" target="_blank">Tiesto-Red Lights</a><br><br>
+         
           <a href="https://www.youtube.com/watch?v=1y6smkh6c-0" target="_blank">Swedish House Mafia ft John Martin-Don't you worry child</a><br><br>
           <a href="https://www.youtube.com/watch?v=bpOR_HuHRNs" target="_blank">Flo-rida ft Sia-Wild Ones</a><br><br>
           <a href="https://www.youtube.com/watch?v=y6120QOlsfU" target="_blank">Darude-Sandstorm</a><br><br>

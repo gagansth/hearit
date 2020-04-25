@@ -16,6 +16,10 @@
     input:hover {
       opacity: 1;
     }
+
+    form label{
+    color:#fff;
+    }
   </style>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -34,11 +38,14 @@
     <tr>
       <td align="center">
         <font size="5">
-          <a href="index.html" color="white">Home</a> &nbsp;|
+          <a href="index.php" color="white">Home</a> &nbsp;|
           <a href="english.php">English</a> &nbsp;|
           <a href="hindi.php">Hindi</a> &nbsp;|
           <a href="nepali.php">Nepali</a> &nbsp;|
           <a href="playlists.php">Shuffled Playlist</a> &nbsp;|
+          <a href="kpop.html">K-POP</a> &nbsp; |
+          <a href="rock.php"><img src="Pictures/rockicon.png" alt="Rock" style="height:30px;position:absolute;"/></a>&nbsp;&nbsp; |
+          <a href="edm.php"><img src="Pictures/edm.png" alt="EDM" style="height:40px;position:absolute;margin-top:-4px;"/></a>&nbsp;&nbsp;&nbsp; |
           <a href="aboutus.html">About Us</a>
         </font>
       </td>
@@ -93,11 +100,11 @@
       <td>
         <form name='addForm' method='get' action="action2.php" />
         <label>Enter Artist Name</label>
-        <input type='text' name='artist' id='artist'></br>
+        <input type='text' name='artist' id='artist' required></br>
         <label>Enter Song Name</label>
-        <input type='text' name='songname' id='songname'><br>
+        <input type='text' name='songname' id='songname' required><br>
         <label>Enter Youtube URL</label>
-        <input type='text' name='url' id='url'></input><br>
+        <input type='text' name='url' id='url' required></input><br>
         <button type='submit'>Add</button> &nbsp;&nbsp;&nbsp;
         <a href="#bottom">Check Below</a>
         </form>
@@ -211,11 +218,6 @@
     </tr>
     <tr>
       <td align='center'><a href="#top" name="bottom">Back to top</td>
-    </tr>
-    <tr>
-      <td>
-        A portal website to <a href="https://www.youtube.com" target="_blank"> Youtube</a> and <a href="http://www.azlyrics.com/" target="_blank"> Azlyrics </a>
-      </td>
     </tr>
   </table>
 </body>
